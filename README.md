@@ -21,22 +21,22 @@ pls "cool" 1.5 # plays the song a 50% faster
 
 ### Unix-based systems
 
-- Install `mplayer` with your favorite package manager 📦
-- Make sure the command `mplayer` works on your shell ✔️
-- Copy the scripts to some directory, let's say `~me/play-and-shift` 📁
-- Add that directory to the `PATH` environment variable: 🛣️
+- 📦 Install `mplayer` with your favorite package manager
+- ✔️ Make sure the command `mplayer` works on your shell
+- 📁 Copy the scripts to some directory, let's say `~/play-and-shift`
+- 🛣️ Add that directory to the `PATH` environment variable:
 
 ```bash
-export PATH=$PATH:~me/play-and-shift
+export PATH=$PATH:~/play-and-shift
 # add this to the end of ~/.bashrc
 ```
 
 ### Windows
 
-- Install [Git Bash](https://gitforwindows.org/) 💻
-- Copy the scripts to some folder, lets say `C:\scripts` 📁
-- Move the contents of the `windows` folder to the root of `C:\scripts` 🌱
-- Add that directory to the `PATH` environment variable: 🛣️
+- 💻 Install [Git Bash](https://gitforwindows.org/)
+- 📁 Copy the scripts to some folder, lets say `C:\scripts`
+- 🌱 Move the contents of the `windows` folder to the root of `C:\scripts`
+- 🛣️ Add that directory to the `PATH` environment variable:
   * From the Start Menu, search `Edit the system environment variables`
   * Click `Environment Variables...`
   * Edit your user's `Path` variable
