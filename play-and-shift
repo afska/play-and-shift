@@ -1,0 +1,24 @@
+#!/bin/bash
+
+SONG=$1
+VALUE=$2
+PARAMETER=$3 # "speed" or "pitch" (default)
+
+fileName="${@: 1: $(expr $# - 1)}"
+pitch="${@: -1}"
+
+if [ $VALUE ">" 0 ] ; then
+	FACTOR=1.059463094352953
+else
+	FACTOR=0.9438743126816935
+fi
+SEMITONES=$(echo $VALUE | awk '{ print ($1 >= 0) ? $1 : 0 - $1}')
+
+if [ $PARAMETER == "speed" ] ; then
+	SPEED=$VALUE
+else
+	SPEED=$(awk "BEGIN{printf(\"%0.25f\", $FACTOR ^ $SEMITONES)}")
+	MODIFIER=":speed=pitch"
+fi
+
+mplayer -af scaletempo=scale=1.0$MODIFIER -speed "$SPEED" "$SONG"
