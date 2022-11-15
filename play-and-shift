@@ -4,9 +4,6 @@ SONG=$1
 VALUE=$2
 PARAMETER=$3 # "speed" or "pitch" (default)
 
-fileName="${@: 1: $(expr $# - 1)}"
-pitch="${@: -1}"
-
 if [ $VALUE ">" 0 ] ; then
 	FACTOR=1.059463094352953
 else
